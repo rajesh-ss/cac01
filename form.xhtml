@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
-        rel="stylesheet">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
@@ -25,27 +24,27 @@
             <img src="./assests/christ_logo.jpeg" class="img-fluid mb-5" alt="Logo" id="christLogo" />
             <h1>FeedBack Form</h1>
 
-            <form class=" border border-info rounded-lg p-5 mw-100 custom">
+            <form class=" border border-info rounded-lg p-5 mw-100 custom forReset" >
                 <!-- name input -->
                 <div class="form-outline mb-2">
-                    <label class="form-label" for="getNams">Name</label>
-                    <input type="name" id="getNam" class="form-control form-control-lg" placeholder="Enter your name" />
-                    <span class="has-error"></span>
+                    <label class="form-label" for="fname">Name</label>
+                    <input type="name" id="fname" class="form-control form-control-lg" placeholder="Enter your name" />
+                    <span class="er_or"></span>
 
                     </div>
                 <!-- address input -->
-                <label class="form-label" for="getAddr">Address</label>
+                <label class="form-label" for="faddr">Address</label>
                 <div class="form-outline mb-2">
-                    <input type="email" id="getAddr" class="form-control form-control-lg"
+                    <input type="text" id="faddr" class="form-control form-control-lg"
                         placeholder="Enter your Address" />
                 </div>
 
                 <!-- Email input -->
                 <div class="form-outline mb-2">
-                    <label class="form-label" for="getEm">Email address</label>
-                    <input type="email" id="getEm" class="form-control form-control-lg"
+                    <label class="form-label" for="femail">Email address</label>
+                    <input type="email" id="femail" class="form-control form-control-lg"
                         placeholder="Enter your email address" />
-                    <span class="has-error"></span>
+                    <span class="er_or"></span>
                 </div>
 
 
@@ -129,22 +128,23 @@
                           type="submit"
                           class="btn btn-dark btn-lg"
                           style="padding-left: 2.5rem; padding-right: 2.5rem"
+
                         >
                           Submit
                         </button>
 
                     </div>
-                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <div class="text-center text-lg-start mt-4 pt-2">
                             <button
-                              type="submit"
+                              type="reset"
                               class="btn btn-dark btn-lg"
                               style="padding-left: 2.5rem; padding-right: 2.5rem"
+                              onclick="resetme()"
                             >
                               Reset
                             </button>
                         </div>
                 </div>
-                
             </form>
         </div>
 
@@ -152,6 +152,9 @@
 
 
     </div>
+<script src="./formValidation.js">
+
+</script>
 </body>
 
 </html>

@@ -1,10 +1,10 @@
 
 
 
-let email=document.getElementById("getEm");
-let nam=document.getElementById("getNam");
-let addr = document.getElementById("getAddr");
-let er = document.getElementsByClassName("has-error");
+let email=document.getElementById("femail");
+let nam=document.getElementById("fname");
+let addr = document.getElementById("faddr");
+let er = document.getElementsByClassName("er_or");
 
 
 
@@ -14,6 +14,8 @@ email.onkeydown = ()=>{
 
    const regex1=/^([a-z0-9\.-]+)@(christuniversity+)\.(in{1,8})$/;
    const regex2= /^([a-z0-9\.-]+)@(Christuniversity+)\.(in{1,8})(.[a-z]{1,8})$/;
+
+   console.log("connected");
 
    if(regex1.test(email.value)||regex2.test(email.value))
    {
@@ -40,3 +42,6 @@ nam.onkeydown = ()=>{
     }
    }
 
+   function resetme() {
+    document.getElementsByClassName("forReset")[0].reset();
+  }
