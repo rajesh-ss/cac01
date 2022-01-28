@@ -6,16 +6,35 @@ let nam=document.getElementById("getNam");
 let psw = document.getElementById("getPsw");
 let er = document.getElementsByClassName("has-error");
 
-/* cookiesDarkOn =  "img=./assests/black-car.jpg; bg=rgb(124, 123, 123);"; */
-cookiesDarkOn =  "img=./assests/black-car.jpg; bg=#ccc;";
-cookiesDarkOff =  "img=./assests/dark_image_car01.jpg; bg=#fff;";
+const regex1=/^([a-z0-9\.-]+)@(christuniversity+)\.(in{1,8})$/;
+const regex2= /^([a-z0-9\.-]+)@(Christuniversity+)\.(in{1,8})(.[a-z]{1,8})$/;
+const regname = /^\D*$/;
+const regpsw = /^([a-zA-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-\[\]\{\}<>`+_;:\=])(?=.*?[0-9]).{6,}$/;
 
 
+function valAll(){
+    if(!regex1.test(email.value)){
+        alert("Invalid Email id");
+    }
+    else{
+        if(!(nam.value.search(regname) == 0 && nam.value!='')){
+            alert("Invalid user name");
+        }
+        else{
+            if(!regpsw.test(psw.value)){
+                alert("Invalid password format, try again");
+            }
+            else{
+
+                document.getElementsByClassName("tovalidate")[0].action = "./form.xhtml"
+            }
+        }
+    }
+}
 
 email.onkeydown = ()=>{
 
-   const regex1=/^([a-z0-9\.-]+)@(christuniversity+)\.(in{1,8})$/;
-   const regex2= /^([a-z0-9\.-]+)@(Christuniversity+)\.(in{1,8})(.[a-z]{1,8})$/;
+
 
    if(regex1.test(email.value)||regex2.test(email.value))
    {
@@ -29,7 +48,7 @@ email.onkeydown = ()=>{
 
 nam.onkeydown = ()=>{
 
-    const regname = /^\D*$/;
+
     let arr = nam.value.search(regname);
     console.log(arr);
     if(arr == 0 && nam.value!=''){
@@ -43,22 +62,6 @@ nam.onkeydown = ()=>{
    }
 
 
-/*    phNum.onkeydown = ()=>{
-
-    const regtendigit = /^\d{9}$/;
-    let ts = regtendigit.test(phNum.value);
-    console.log(phNum.value);
-
-    if(ts){
-        er[1].innerText = "valid phone number";
-        er[1].style.color = "lime";
-    }
-    else{
-        er[1].innerText = "invalid phone number";
-        er[1].style.color = "red";
-    }
-   }  */
-
 
    psw.onkeydown = ()=>{
 
@@ -69,7 +72,7 @@ nam.onkeydown = ()=>{
 
     /* const regpsw = /^([a-zA-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-])(?=.*?[0-9]).{6,}$/; */
     
-    const regpsw = /^([a-zA-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-\[\]\{\}<>`+_;:\=])(?=.*?[0-9]).{6,}$/;
+ 
 
     let ts = psw.value.search(regpsw);
 /*     console.log(ts);
