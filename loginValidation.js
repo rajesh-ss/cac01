@@ -42,8 +42,8 @@ nam.onkeydown = ()=>{
     }
    }
 
-/* 
-   phNum.onkeydown = ()=>{
+
+/*    phNum.onkeydown = ()=>{
 
     const regtendigit = /^\d{9}$/;
     let ts = regtendigit.test(phNum.value);
@@ -57,7 +57,7 @@ nam.onkeydown = ()=>{
         er[1].innerText = "invalid phone number";
         er[1].style.color = "red";
     }
-   } */
+   }  */
 
 
    psw.onkeydown = ()=>{
@@ -87,30 +87,4 @@ nam.onkeydown = ()=>{
    }
 
 
-  /*  
-   function changeToDark(){
-      
-
-      imgSrc = "./assests/black-car.jpg";
-      bgcl = "#eee";
-      img = document.getElementById("leftImg");
-      dark_mode = document.getElementById('dark');
-
-    if(dark_mode.checked){
-
-        document.cookies = cookiesDarkOn;
-    }
-    else{
-        document.cookies = cookiesDarkOff;
-    }
-    console.log((document.cookies.split(";")[1]).split("=")[1]);
-    imgSrc = (document.cookies.split(";")[0]).split("=")[1];
-    bgcl =  (document.cookies.split(";")[1]).split("=")[1]
-
-
-    document.body.style.backgroundColor = bgcl;
-    img.src= imgSrc;
-    
-
-   }
-    */
+ 
